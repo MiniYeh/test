@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="utf-8"/>
+        <title>台北一日遊</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <nav class="navigation">
+            <section class="navigation--left">
+                <div>台北一日遊</div>
+            </section>
+
+            <section class="navigation--right">
+                <a class="manu">預定行程</a>
+                <a class="manu">登入/註冊</a>
+            </section>
+        </nav>
+
+        <div class="head">
+            <div class="head2">
+                <div class="head--left">
+                    <div class="text1">輕鬆享受台北一日悠閒</div>
+                    <div class="text2">探索每個角落，體驗城市的深度旅遊行程</div>
+                    <form class="search">
+                        <input id="ins" class="insert" type="text" placeholder="輸入景點名稱查詢">
+                        <button id="but" type="submit" class="button"><img src="./css/img/search_icon.png" class="logo"/></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main></main>
+
+        <footer>COPYRIGHT © 2021 台北一日遊</footer>
+
+        <script src="{{url_for('static', filename='js/index.js')}}"></script>
+
+    </body>
+</html>
