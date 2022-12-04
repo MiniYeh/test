@@ -121,7 +121,7 @@ def attractions():
 def attraction_id(attractionId):
     try:
         sql = """
-            SELECT id, name, category, description, address, transport, mrt, latitude, longitude, images
+            SELECT id, name, category, description, address, transport, mrt, lat, lng, imgs
             FROM attractions WHERE id = %s;
         """
         val = (attractionId, )
@@ -147,9 +147,9 @@ def attraction_id(attractionId):
                     "address": address,
                     "transport": transport,
                     "mrt": mrt,
-                    "latitude": latitude,
-                    "longitude": longitude,
-                    "images": eval(images)
+                    "lat": latitude,
+                    "lng": longitude,
+                    "imgs": eval(images)
                 }
 
         
