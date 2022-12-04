@@ -65,7 +65,7 @@ function updateHtml(response) {
     /**
      * img section
      */
-    const myString = response.data[index]["images"][0];
+    const myString = response.data[index]["imgs"][0];
     const img = document.createElement("img");
     all.appendChild(img);
     img.setAttribute("src", myString);
