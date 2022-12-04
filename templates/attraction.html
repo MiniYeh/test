@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" charset="utf-8"/>
+        <title>景點</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/attraction.css') }}"/>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <nav class="navigation">
+            <section class="navigation--left">
+                <div>台北一日遊</div>
+            </section>
+
+            <section class="navigation--right">
+                <a class="manu">預定行程</a>
+                <a class="manu">登入/註冊</a>
+            </section>
+        </nav>
+
+        <main>
+            <div class="content">
+                <div id="cover" class="cover" style="position: absolute;">
+                    <div id="images"></div>
+                    <button id="left-btn"><img src="../css/img/btn_leftArrow.png"></button>
+                    <button id="right-btn"><img src="../css/img/btn_rightArrow.pn"></button>
+                    <ul class="dots"></ul>
+                </div>
+    
+                <div class=""title">
+                    <div class="booking_block">
+                        <div class="booking_info">
+                            <div class="booking_title">訂購導覽行程</div>
+                            <div class="booking_des">以此景點為中心的一日行程，帶您探索城市角落故事</div>
+                            <form class="form">
+                                <div class="booking_date">選擇日期:
+                                    <input id="data" type="date">
+                                </div>
+                                <div class="booking_time">選擇時間:
+                                    <input id="input_time1" type="radio" name="time" value="morning" onclick="check(1)" checked="checked">上半天
+                                    <input id="input_time2" type="radio" name="time" value="afternoon" onclick="check(2)"> 下半天
+                                </div>
+                                <div>
+                                    <span class="booking_price">導覽費用: </span><span class="money">新台幣 2000 元</span>
+                                </div>
+                                <button id="btn" type="submit" class="button">開始預訂行程</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>COPYRIGHT © 2021 台北一日遊</footer>
+
+        <script src="{{url_for('static', filename='js/attraction.js')}}"></script>
+
+    </body>
+
+
+</html>
