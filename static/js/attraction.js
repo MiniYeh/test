@@ -1,5 +1,5 @@
 let path = location.pathname;
-let url = '/api/attraction/${id}'
+let url = '/api'+path;
 
 async function attraction() {
     const response = await fetch(url).then((res) => {
@@ -68,7 +68,7 @@ function updateHtml(response) {
     /**
      * img section
      */
-     const attractionImages = response.data.images;
+     const attractionImages = response.data.imgs;
      Array.from(attractionImages).forEach((image, index) => {
         const img = document.createElement("img");
         img.setAttribute("src", image);
